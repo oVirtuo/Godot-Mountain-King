@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ms1ag5term2s"]
+
+[ext_resource type="PackedScene" uid="uid://b1p317chpv5u" path="res://main/ship_player/ship_player.tscn" id="1_d0ly5"]
+[ext_resource type="Script" path="res://main/parallax_layer.gd" id="1_v7n10"]
+[ext_resource type="Texture2D" uid="uid://dijrtupjh55ux" path="res://assets/Background/Space_Background1.png" id="2_md3fh"]
+[ext_resource type="Texture2D" uid="uid://dqlwoe5oblvpc" path="res://assets/Background/Space_Background3.png" id="3_ik1fs"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+script = ExtResource("1_v7n10")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(969, 538)
+texture = ExtResource("2_md3fh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(964, 538)
+texture = ExtResource("3_ik1fs")
+offset = Vector2(1920, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2886, 538)
+texture = ExtResource("3_ik1fs")
+
+[node name="ShipPlayer" parent="." instance=ExtResource("1_d0ly5")]
+position = Vector2(228, 224)
