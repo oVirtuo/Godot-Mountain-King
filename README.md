@@ -1,2 +1,5 @@
 # Godot-Mountain-King
-Jogo Mountain King desenvolvido com Godot
+Jogo do Mountain King desenvolvido com Godot
+
+## Correções do jogo Star Explorer
+- Parallax Background
